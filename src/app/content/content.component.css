@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Crete+Round|Poppins');
+
+p{
+ text-align: justify;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }

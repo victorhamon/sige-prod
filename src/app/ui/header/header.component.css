@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+#principalHeader
+{
+    background-color:#0096D5;
+
+}
+.brand-logo{padding:8px; position: relative;}
+#logoheader{width:38px;}
+#nav-mobile{float: left!important;}
+#ajuda{display: inline-block;}
+#ajuda i{float:right;}
+.btn .logout{line-height: 44px!important;}
+.switch > label {
+    color: white;
+}
+::ng-deep .dropdown-content, .dropdown-content.active {
+    min-width: 15%;
+}
+
+::ng-deep .mat-select-value{
+  color:#fff;
+}
+
+::ng-deep .mat-select-arrow{
+  color:#fff;
+}
+
+::ng-deep .mat-select-placeholder{
+  color:#fff;
+}
+
+::ng-deep .mat-form-field-underline.ng-tns-c4-0.ng-star-inserted{
+  background-color:#fff;
+}
+
+::ng-deep .mat-form-field-label.ng-tns-c4-0.ng-star-inserted{
+  color:#fff;
+}
+
+::ng-deep .mat-form-field.mat-focused.mat-primary .mat-select-arrow{
+  color: #fff;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple{
+  background-color: #fff;
+}
+
+::ng-deep .mat-primary .mat-option.mat-selected:not(.mat-option-disabled){
+  color: #0096D5;
+}
+
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-label{
+  color: #fff;
+ }
+
+ ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline{
+  background-color: #fff;
+ }
+ ::ng-deep .mat-form-field.mat-focused .mat-form-field-label{
+   color: #fff;
+ }

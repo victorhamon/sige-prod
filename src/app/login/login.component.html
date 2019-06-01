@@ -1,0 +1,27 @@
+<div *ngIf="!forgotPasswordMode" class="bg_login">
+  <div class="col m6 s6 l6">
+    <form [formGroup]="loginForm" (ngSubmit)="login()" class="col s12 main_content" style="z-index: 100;">
+      <div class="row">
+        <div class="input-field col s6 offset-s6"style="margin-top:10%;">
+          <input id="username" formControlName="username" type="text"/>
+          <label for="username">Usuario</label> <br />
+          <div class="input-field">
+            <input id="password" formControlName="password" type="password"/>
+            <label class="labelLeft" for="password">Senha</label>
+          </div>
+        <div style="text-align: center">
+            <br/>
+            <a type="button" (click)="forgotPasswordToggle()">Esqueci minha senha</a>
+          </div>
+          <br/>
+          <div class="center-align">
+            <button [disabled]="!loginForm.valid" type="submit" class="waves-effect waves-light btn ">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div *ngIf="forgotPasswordMode">
+    <app-forgot-password (cancelForgot)="cancelForgotMode($event)" ></app-forgot-password>
+</div>

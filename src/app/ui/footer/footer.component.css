@@ -1,0 +1,33 @@
+.container {
+    width: 100%;
+    max-width:initial;
+  }
+  .container > .row {
+    margin: 0;
+  }
+  .container > .row > .col {
+    padding: 0;
+  }
+
+
+.rodape {
+  background-color: #333;
+  width: 100%;
+}
+.rodape a{color:#fff;}
+
+.column
+{
+    padding: 30px;
+    float: left;
+}
+
+li:before {
+    content: "•"; 
+    padding-right: 8px;
+    color: white; 
+}
+#logoRodape{    
+    max-width: 79%!important;
+    height: auto;
+    padding: 11px!important;}

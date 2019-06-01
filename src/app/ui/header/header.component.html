@@ -1,0 +1,42 @@
+<ng-template [ngIf]="authService.loggedIn()">
+  <nav>
+    <div id="principalHeader" class="nav-wrapper row">
+      <a href="#" class="brand-logo col l1 m1 s1">
+        <img class="responsive-img"
+             id="logoheader"
+             src="assets/imgs/icone-or.svg" />
+      </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down col l6 m4 s12">
+        <li *ngFor="let dropMenu of DropMenu; trackBy: trackElement">
+          <a [hidden]="!dropMenu.hasSubMenu"
+             materialize="dropdown"
+             [attr.data-activates]="dropMenu.id">{{ dropMenu.titulo }}</a>
+          <a [hidden]="dropMenu.hasSubMenu" routerLink="/{{ dropMenu.route }}">
+            {{
+            dropMenu.titulo
+            }}
+          </a>
+          <ul attr.id="{{ dropMenu.id }}" class="dropdown-content">
+            <li *ngFor="let sub of dropMenu.submenus">
+              <a routerLink="/{{ sub.route }}">{{ sub.tituloSub }}</a>
+              <ol class="divider"></ol>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul id="nav-mobile" class="right hide-on-med-and-down col l1 m4 s12">
+        <li>
+        </li>
+      </ul>
+      <ul id="nav-mobile" class="right hide-on-med-and-down col l2 m4 s12">
+      </ul>
+      <ul id="nav-mobile" class="right hide-on-med-and-down col l2 m4 s12">
+        <span>Bem vindo, {{ user }}!</span>
+        <a class="btn btn-floating halfway-fab waves-effect waves-light red"
+           (click)="logout()">
+          <i class="material-icons logout">power_settings_new</i>
+        </a>
+      </ul>
+    </div>
+  </nav>
+</ng-template>
